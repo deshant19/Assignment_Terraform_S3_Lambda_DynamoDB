@@ -1,1 +1,1 @@
-# Assignment_Terraform_S3_Lambda_DynamoDB
+# Terraform_S3_Lambda_DynamoDB
