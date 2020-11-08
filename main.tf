@@ -99,3 +99,15 @@ resource "aws_lambda_permission" "allow_terraform_bucket" {
    principal = "s3.amazonaws.com"
    source_arn = aws_s3_bucket.my_bucket.arn
 }
+
+resource "aws_dynamodb_table" "example" {
+  name           = "information"
+  read_capacity  = 10
+  write_capacity = 10
+  hash_key       = "dynamodbHashKey"
+
+  attribute {
+    name = "dynamodbHashKey"
+    type = "S"
+  }
+}
